@@ -16,13 +16,15 @@ public class ReadCSV {
 		List<String[]> data = new ArrayList<String[]>();
 		String filename = "C:\\Users\\travis.KELNOREEM\\Documents\\Udemy\\Java\\JuniorSoftwareDeveloper\\JavaTraining\\students.csv";
 		String datarow;
+		double balance = 0;
+		
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(filename));
 			while ((datarow = br.readLine()) != null) {
 				String[] line = datarow.split(",");
 				data.add(line);
 			}
-			
+			br.close();
 			
 		} catch (FileNotFoundException e) {			
 			e.printStackTrace();
