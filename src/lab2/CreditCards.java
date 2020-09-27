@@ -55,8 +55,5 @@ public class CreditCards {
 		else {
 			System.out.println("Thank you for your payment.  You have overpaid by " + (balance * -1));
 		}
-		
-		
 	}
-
 }
